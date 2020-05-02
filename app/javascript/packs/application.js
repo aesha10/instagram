@@ -6,9 +6,21 @@
 require("@rails/ujs").start()
 //= require jquery
 //= require bootstrap-sprockets
-require("turbolinks").start()
-require("@rails/activestorage").start()
-require("channels")
+//= require masonry/jquery.masonry
+//= require("turbolinks").start()
+//= require("@rails/activestorage").start()
+//= require("channels")
+
+$(function(){
+    $('#masonry-container').masonry({
+        itemSelector: '.box',
+        columnWidth: 200,
+        isAnimated: !Modernizr.csstransitions,
+        isFitWidth: true
+    });
+
+});
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
